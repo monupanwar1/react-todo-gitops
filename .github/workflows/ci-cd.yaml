@@ -22,7 +22,7 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          IMAGE=${{ secrets.DOCKER_USERNAME }}/todo-frontend
+          IMAGE=${{ secrets.DOCKER_USERNAME }}/react-todo-gitops
           TAG=${GITHUB_SHA::7}
           docker build -t $IMAGE:$TAG .
           docker push $IMAGE:$TAG

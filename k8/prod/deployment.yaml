@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
         - name: todo-frontend
-          image: monupanwar1/todo-frontend:latest
+          image: monupanwar1/react-todo-gitops:latest
           ports:
             - containerPort: 80
