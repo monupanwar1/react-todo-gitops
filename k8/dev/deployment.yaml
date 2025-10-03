@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-frontend-dev
+  labels:
+    app: todo-frontend
+    env: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todo-frontend
+      env: dev
+  template:
+    metadata:
+      labels:
+        app: todo-frontend
+        env: dev
+    spec:
+      containers:
+        - name: todo-frontend
+          image: monupanwar1/todo-frontend:latest
+          ports:
+            - containerPort: 80
